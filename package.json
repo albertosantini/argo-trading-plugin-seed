@@ -1,0 +1,39 @@
+{
+    "name": "argo-trading-plugin-seed",
+    "description": "Seed plugin for argo-trading app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "bin": {
+        "argo-trading-plugin-seed": "./bin/argo-trading-plugin-seed"
+    },
+    "preferGlobal": true,
+    "repository": "git@github.com:albertosantini/argo.git",
+    "keywords": [
+        "argo plugin",
+        "trading",
+        "forex",
+        "fxtrade",
+        "oanda"
+    ],
+    "author": "Alberto Santini",
+    "license": "MIT",
+    "engines": {
+        "node": "~0.12.x"
+    },
+    "dependencies": {
+        "seneca": "~0.6.1"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "devDependencies": {
+        "eslint": "~0.21.0",
+        "eslint-plugin-angular": "~0.0.7",
+        "grunt": "~0.4.5",
+        "grunt-cli": "~0.1.13",
+        "grunt-eslint": "~13.0.0"
+    },
+    "peerDependencies": {
+        "argo-trading": "~1.9.1"
+    }
+}
