@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-var seneca = require("seneca");
+var util = require("util"),
+    seneca = require("seneca");
 
-seneca().client().act("role:plugin", {
+seneca().client({host: "localhost"}).act("role:plugin", {
         cmd: "register",
         name: "argo-trading-plugin-seed"
     }, function (err, result) {
