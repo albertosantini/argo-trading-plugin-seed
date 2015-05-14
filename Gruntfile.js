@@ -7,7 +7,8 @@ module.exports = function (grunt) {
                 config: ".eslintrc"
             },
             src: [
-                "Gruntfile.js"
+                "Gruntfile.js",
+                "bin/argo-trading-plugin-seed"
             ]
         }
 
