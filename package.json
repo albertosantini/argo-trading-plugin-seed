@@ -21,7 +21,7 @@
         "node": "~0.12.x"
     },
     "dependencies": {
-        "seneca": "~0.6.1"
+        "flic": "~1.1.2"
     },
     "scripts": {
         "test": "grunt"
