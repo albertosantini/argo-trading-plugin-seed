@@ -3,13 +3,16 @@
 "use strict";
 
 var util = require("util"),
-    seneca = require("seneca");
+    StreamingNode = require("flic").node;
 
-seneca().client({host: "localhost"}).act("role:plugin", {
-        cmd: "register",
-        name: "argo-trading-plugin-seed"
-    }, function (err, result) {
-        if (!err) {
-            util.log("Argo plugin:", result.value);
-        }
-    });
+var streamingNode = new StreamingNode(function (err) {
+    if (!err) {
+        util.log("plugin online");
+    } else {
+        util.log(err);
+    }
+});
+
+streamingNode.on("argo.streaming", function (data) {
+    util.log(data);
+});
