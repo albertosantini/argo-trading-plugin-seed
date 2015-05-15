@@ -16,3 +16,7 @@ var streamingNode = new StreamingNode(function (err) {
 streamingNode.on("argo.streaming", function (data) {
     util.log(data);
 });
+
+streamingNode.on("error", function (err) {
+    util.log(err);
+});
