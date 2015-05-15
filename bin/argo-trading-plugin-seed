@@ -7,7 +7,7 @@ var util = require("util"),
 
 var streamingNode = new StreamingNode(function (err) {
     if (!err) {
-        util.log("plugin online");
+        util.log("Argo plugin online");
     } else {
         util.log(err);
     }
