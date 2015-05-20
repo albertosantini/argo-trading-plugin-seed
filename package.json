@@ -24,6 +24,7 @@
         "flic": "~1.1.2"
     },
     "scripts": {
+        "start": "node lib/main.js",
         "test": "grunt"
     },
     "devDependencies": {
