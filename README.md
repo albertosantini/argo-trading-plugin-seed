@@ -51,17 +51,17 @@ The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
-We get the tools we depend upon via `npm`, the [node package manager][npm].
+We get the tools we depend upon via `npm`, the [node package manager][https://www.npmjs.com/].
 
 ```
 npm install
 ```
 
-`node_modules` contains the npm packages for the tools we need
+`node_modules` contains the npm packages for the tools we need.
 
 ### Run the plugin
 
-The simplest way to start this plugin is:
+The simplest way to start this demo plugin is:
 
 ```
 npm start
@@ -69,7 +69,34 @@ npm start
 
 ## How to customize the plugin
 
-## Interface with Argo
+In `lib/custom` folder there are the files implementing the name and the
+callbacks of the plugin:
+
+- `name.js` The registration name of the plugin.
+- `onhearbeat.js` Called on `argo.streaming` with plugin status `loaded`.
+- `onload.js` Called in the callback of `argo.register`
+- `ontick.js` Called on `argo.streaming` with plugin status `enabled`.
+- `ontransaction.js` Called on `argo.streaming` with plugin status `enabled`.
+- `onunload.js` Called in the callback of `SIGINT`.
+
+You need to fill the corresponding functions in those files.
+
+## Communication with Argo
+
+The communication with Argo is provided with [flic](https://github.com/nkcmr/flic),
+an inter-process communication via TCP library.
+
+### Events
+
+- `argo.register` Told by plugin to register the plugin.
+- `argo.unregister` Told by plugin to unregister the plugin.
+- `argo.status` Told by Argo to get the plugin status.
+- `argo.enable` Told by Argo to enable the plugin.
+- `argo.disable` Told by Argo to disable the plugin.
+- `argo.streaming` Told by Argo to pass streaming data (heartbeats, ticks and transactions).
+- `error` To catch errors by plugin.
+- `SIGINT` To stop the plugin with CTRL-C (or a SIGINT signal).
+- `uncaughtException` To catch uncaught exceptions.
 
 
 [OANDA]: http://fxtrade.oanda.co.uk/
