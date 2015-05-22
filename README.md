@@ -51,7 +51,7 @@ The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
-We get the tools we depend upon via `npm`, the [node package manager][https://www.npmjs.com/].
+We get the tools we depend upon via `npm`, the [node package manager](https://www.npmjs.com/).
 
 ```
 npm install
