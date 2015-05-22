@@ -81,6 +81,42 @@ callbacks of the plugin:
 
 You need to fill the corresponding functions in those files.
 
+### Utils
+
+Inside the callbacks, you may fill orders or request the historical bars.
+
+#### order.fillOrder
+
+```
+var orderUtil = require("../util/order");
+
+orderUtil.fillOrder({
+    instrument: "EUR_USD",
+    type: "market",
+    side: "buy",
+    units: 100
+}, console.log);
+```
+
+See [OANDA order endpoints](http://developer.oanda.com/rest-live/orders/) for
+more details about input and output parameters.
+
+#### bars.getHistBars
+
+```
+var barsUtil = require("../util/bars");
+
+barsUtil.getHistBars({
+    instrument: "EUR_USD",
+    granularity: "M5"
+}, console.log);
+```
+
+Notice `bars[0]` is the most recent bar, usually not completed.
+
+See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
+details about input and output parameters.
+
 ## Communication with Argo
 
 The communication with Argo is provided with [flic](https://github.com/nkcmr/flic),
