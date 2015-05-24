@@ -4,7 +4,7 @@
 [![NGN Dependencies](https://david-dm.org/albertosantini/argo-trading-plugin-seed.png)](https://david-dm.org/albertosantini/argo-trading-plugin-seed)
 [![Build Status](https://travis-ci.org/albertosantini/argo-trading-plugin-seed.png)](https://travis-ci.org/albertosantini/argo-trading-plugin-seed)
 
-This project is a plugin skeleton for [Argo](https://github.com/albertosantini/argo),
+This project is a plugin skeleton for [Argo][],
 the open source trading platform, connecting directly with [OANDA][] through the
 powerful [API][].
 
@@ -61,7 +61,7 @@ npm install
 
 ### Run the plugin
 
-The simplest way to start this demo plugin is:
+After starting [Argo][], the simplest way to start the seed plugin is:
 
 ```
 npm start
@@ -124,6 +124,9 @@ an inter-process communication via TCP library.
 
 ### Events
 
+The events are handled in `lib/main.js` and, usually, the plugin developer
+should not modify it.
+
 - `argo.register` Told by plugin to register the plugin.
 - `argo.unregister` Told by plugin to unregister the plugin.
 - `argo.status` Told by Argo to get the plugin status.
@@ -135,6 +138,7 @@ an inter-process communication via TCP library.
 - `uncaughtException` To catch uncaught exceptions.
 
 
+[Argo]: https://github.com/albertosantini/argo
 [OANDA]: http://fxtrade.oanda.co.uk/
 [API]: http://developer.oanda.com/
 [git]: http://git-scm.com/
