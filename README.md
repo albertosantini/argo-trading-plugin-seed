@@ -73,7 +73,7 @@ In `lib/custom` folder there are the files implementing the name and the
 callbacks of the plugin:
 
 - `name.js` The registration name of the plugin.
-- `onhearbeat.js` Called on `argo.streaming` with plugin status `loaded`.
+- `onhearbeat.js` Called on `argo.streaming` with plugin status `loaded` or `enabled`.
 - `onload.js` Called on `argo.register` callback.
 - `ontick.js` Called on `argo.streaming` with plugin status `enabled`.
 - `ontransaction.js` Called on `argo.streaming` with plugin status `enabled`.
