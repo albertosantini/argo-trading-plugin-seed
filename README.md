@@ -74,10 +74,10 @@ callbacks of the plugin:
 
 - `name.js` The registration name of the plugin.
 - `onhearbeat.js` Called on `argo.streaming` with plugin status `loaded`.
-- `onload.js` Called in the callback of `argo.register`
+- `onload.js` Called on `argo.register` callback.
 - `ontick.js` Called on `argo.streaming` with plugin status `enabled`.
 - `ontransaction.js` Called on `argo.streaming` with plugin status `enabled`.
-- `onunload.js` Called in the callback of `SIGINT`.
+- `onunload.js` Called on `SIGINT` callback.
 
 You need to fill the corresponding functions in those files.
 
@@ -85,7 +85,7 @@ You need to fill the corresponding functions in those files.
 
 Inside the callbacks, you may fill orders or request the historical bars.
 
-#### order.fillOrder
+#### order.fillOrder(order, callback)
 
 ```
 var orderUtil = require("../util/order");
@@ -101,7 +101,7 @@ orderUtil.fillOrder({
 See [OANDA order endpoints](http://developer.oanda.com/rest-live/orders/) for
 more details about input and output parameters.
 
-#### bars.getHistBars
+#### bars.getHistBars(barOptions, callback)
 
 ```
 var barsUtil = require("../util/bars");
