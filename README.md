@@ -137,6 +137,13 @@ should not modify it.
 - `SIGINT` To stop the plugin with CTRL-C (or a SIGINT signal).
 - `uncaughtException` To catch uncaught exceptions.
 
+## Checklist, if you want to publish your plugin
+
+- Rename the project, using the convention `argo-trading-plug-myplugin`.
+- Rename the start script `bin/argo-trading-plugin-seed`.
+- Rename the content of `bin` property in `package.json`.
+- Check `Gruntfile.js`.
+
 
 [Argo]: https://github.com/albertosantini/argo
 [OANDA]: http://fxtrade.oanda.co.uk/
