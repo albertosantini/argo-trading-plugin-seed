@@ -139,8 +139,8 @@ should not modify it.
 
 ## Checklist, if you want to publish your plugin
 
-- Rename the project, using the convention `argo-trading-plug-myplugin`.
-- Rename the start script `bin/argo-trading-plugin-seed`.
+- Rename the project, using the convention `argo-trading-plugin-<myplugin>`.
+- Rename the start script as `bin/argo-trading-plugin-<myplugin>`.
 - Rename the content of `bin` property in `package.json`.
 - Check `Gruntfile.js`.
 
