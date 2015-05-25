@@ -2,7 +2,7 @@
     "name": "argo-trading-plugin-seed",
     "description": "Seed plugin for argo-trading app",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "lib/main.js",
     "bin": {
         "argo-trading-plugin-seed": "./bin/argo-trading-plugin-seed"
     },
