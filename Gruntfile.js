@@ -8,7 +8,10 @@ module.exports = function (grunt) {
             },
             src: [
                 "Gruntfile.js",
-                "bin/argo-trading-plugin-seed"
+                "bin/argo-trading-plugin-seed",
+                "scripts/**/*.js",
+                "lib/**/*.js"
+
             ]
         }
 
