@@ -184,14 +184,14 @@ Notice `bars[0]` is the most recent bar, usually not completed.
 See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
 details about input and output parameters.
 
+### Scripts
+
+- `scripts/argo-trading-simulator.js` Primitive simulator to simulate rates streaming.
+
 ## Communication with Argo
 
 The communication with Argo is provided with [flic](https://github.com/nkcmr/flic),
 an inter-process communication via TCP library.
-
-### Scripts
-
-- `scripts/argo-trading-simulator.js` Primitive simulator to simulate rates streaming.
 
 ### Events
 
