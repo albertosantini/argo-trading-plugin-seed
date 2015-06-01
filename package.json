@@ -22,18 +22,18 @@
     },
     "dependencies": {
         "flic": "~1.1.2",
-        "request": "~2.56.0"
+        "request": "~2.57.0"
     },
     "scripts": {
         "start": "node lib/main.js",
         "test": "grunt"
     },
     "devDependencies": {
-        "eslint": "~0.21.2",
+        "eslint": "~0.22.1",
         "eslint-plugin-angular": "~0.0.7",
         "grunt": "~0.4.5",
         "grunt-cli": "~0.1.13",
-        "grunt-eslint": "~13.0.0"
+        "grunt-eslint": "~14.0.0"
     },
     "peerDependencies": {
         "argo-trading": "~1.9.1"

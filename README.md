@@ -73,11 +73,78 @@ In `lib/custom` folder there are the files implementing the name and the
 callbacks of the plugin:
 
 - `name.js` The registration name of the plugin.
+
+```
+module.exports = "seed";
+```
+
 - `onhearbeat.js` Called on `argo.streaming` with plugin status `loaded` or `enabled`.
+
+```
+function onheartbeat(beat) // beat.time
+```
+
 - `onload.js` Called on `argo.register` callback.
-- `ontick.js` Called on `argo.streaming` with plugin status `enabled`.
+
+```
+function onload(name) // plugin name
+```
+
+- `ontick.js` Called on `argo.streaming` with plugin status `enabled` for every tick.
+
+```
+function ontick(tick)
+    // tick.time
+    // tick.instrument
+    // tick.bid
+    // tick.ask
+```
+
+- `onbar.js` Called on `argo.streaming` with plugin status `enabled` for every completed bar.
+
+```
+function onbar(bar)
+    // bar.time
+    // bar.instrument
+    // bar.granularity
+    // bar.openMid
+    // bar.highMid
+    // bar.lowMid
+    // bar.closeMid
+    // bar.volume
+```
+
 - `ontransaction.js` Called on `argo.streaming` with plugin status `enabled`.
+
+```
+function ontransaction(transaction)
+    // transaction.id
+    // transaction.accountId
+    // transaction.time
+    // transaction.type
+    // transaction.instrument
+    // transaction.side
+    // transaction.units
+    // transaction.price
+    // transaction.lowerBound
+    // transaction.upperBound
+    // transaction.takeProfitPrice
+    // transaction.stopLossPrice
+    // transaction.trailingStopLossDistance
+    // transaction.pl
+    // transaction.interest
+    // transaction.accountBalance
+    // transaction.tradeId
+    // transaction.orderId
+    // transaction.tradeOpened
+    // transaction.tradeReduced
+```
+
 - `onunload.js` Called on `SIGINT` callback.
+
+```
+function onunload(name) // plugin name
+```
 
 You need to fill the corresponding functions in those files.
 
@@ -121,6 +188,10 @@ details about input and output parameters.
 
 The communication with Argo is provided with [flic](https://github.com/nkcmr/flic),
 an inter-process communication via TCP library.
+
+### Scripts
+
+- `scripts/argo-trading-simulator.js` Primitive simulator to simulate rates streaming.
 
 ### Events
 
