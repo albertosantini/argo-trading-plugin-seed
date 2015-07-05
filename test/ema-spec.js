@@ -28,11 +28,12 @@ describe("ema", function () {
     it("test series", function () {
         var emaSeries = ema(series, 12);
 
-        assert.equal(439.31019230769243, emaSeries[0]);
-        assert.equal(438.1424704142013, emaSeries[1]);
-        assert.equal(438.10055188893955, emaSeries[2]);
-        assert.equal(436.61277467525656, emaSeries[3]);
-        assert.equal(435.341578571371, emaSeries[4]);
+        assert.equal(440.8975000000001, emaSeries[0]);
+        assert.equal(439.31019230769243, emaSeries[1]);
+        assert.equal(438.1424704142013, emaSeries[2]);
+        assert.equal(438.10055188893955, emaSeries[3]);
+        assert.equal(436.61277467525656, emaSeries[4]);
+        assert.equal(435.341578571371, emaSeries[5]);
     });
 
     it("test next", function () {
