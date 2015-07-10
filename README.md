@@ -163,6 +163,13 @@ orderUtil.fillOrder({
     side: "buy",
     units: 100
 }, console.log);
+
+#### Indicators
+
+- `ema`: `function ema(closes, period, ema0)`
+- `macd`: macd(closes, slowPeriod, fastPeriod, signalPeriod, ema01, ema02, ema03)`
+- `rsi`: function rsi(closes, period, close0, avgGain, avgLoss)`
+
 ```
 
 See [OANDA order endpoints](http://developer.oanda.com/rest-live/orders/) for
