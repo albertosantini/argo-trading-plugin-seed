@@ -166,12 +166,6 @@ orderUtil.fillOrder({
 
 ```
 
-#### Indicators
-
-- `ema`: `function ema(closes, period, ema0)`
-- `macd`: macd(closes, slowPeriod, fastPeriod, signalPeriod, ema01, ema02, ema03)`
-- `rsi`: function rsi(closes, period, close0, avgGain, avgLoss)`
-
 See [OANDA order endpoints](http://developer.oanda.com/rest-live/orders/) for
 more details about input and output parameters.
 
@@ -190,6 +184,12 @@ Notice `bars[0]` is the most recent bar, usually not completed.
 
 See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
 details about input and output parameters.
+
+#### Indicators
+
+- `ema`: `function ema(closes, period, ema0)`
+- `macd`: macd(closes, slowPeriod, fastPeriod, signalPeriod, ema01, ema02, ema03)`
+- `rsi`: function rsi(closes, period, close0, avgGain, avgLoss)`
 
 ### Scripts
 
