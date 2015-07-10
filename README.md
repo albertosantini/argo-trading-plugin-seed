@@ -188,8 +188,8 @@ details about input and output parameters.
 #### Indicators
 
 - `ema`: `function ema(closes, period, ema0)`
-- `macd`: macd(closes, slowPeriod, fastPeriod, signalPeriod, ema01, ema02, ema03)`
-- `rsi`: function rsi(closes, period, close0, avgGain, avgLoss)`
+- `macd`: `macd(closes, slowPeriod, fastPeriod, signalPeriod, ema01, ema02, ema03)`
+- `rsi`: `function rsi(closes, period, close0, avgGain, avgLoss)`
 
 ### Scripts
 
