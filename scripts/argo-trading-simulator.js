@@ -1,7 +1,8 @@
 "use strict";
 
 var util = require("util"),
-    flic = require("flic");
+    flic = require("flic"),
+    config = require("../lib/util/config");
 
 var BridgeNode = flic.bridge,
     FlicNode = flic.node,
@@ -28,7 +29,7 @@ masterNode.on("argo.register", function (pluginName, done) {
     done(null, "http://fake");
 
     setTimeout(function () {
-        masterNode.tell(pluginName + ":argo.enable", pluginName);
+        masterNode.tell(pluginName + ":argo.enable", config, pluginName);
     }, 100);
 });
 
