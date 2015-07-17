@@ -7,7 +7,7 @@
         "argo-trading-plugin-seed": "./bin/argo-trading-plugin-seed"
     },
     "preferGlobal": true,
-    "repository": "git@github.com:albertosantini/argo.git",
+    "repository": "git@github.com:albertosantini/argo-trading-plugin-seed.git",
     "keywords": [
         "argo plugin",
         "trading",
