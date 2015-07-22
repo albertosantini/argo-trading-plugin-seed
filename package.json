@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "flic": "~1.1.2",
-        "request": "~2.58.0"
+        "request": "~2.60.0"
     },
     "scripts": {
         "start": "node lib/main.js",
