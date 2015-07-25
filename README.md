@@ -180,6 +180,27 @@ barsUtil.getHistBars({
 }, console.log);
 ```
 
+Response example:
+
+```
+[ { time: '2015-07-24T12:55:00.000000Z'
+    openMid: 0.7285,
+    highMid: 0.7285,
+    lowMid: 0.7285,
+    closeMid: 0.7285,
+    volume: 1,
+    complete: false },
+  { time: '2015-07-24T12:50:00.000000Z',
+    openMid: 0.72806,
+    highMid: 0.728535,
+    lowMid: 0.72797,
+    closeMid: 0.728535,
+    volume: 42,
+    complete: true },
+//  ...
+
+```
+
 Notice `bars[0]` is the most recent bar, usually not completed.
 
 See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
