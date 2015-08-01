@@ -46,20 +46,20 @@ setInterval(fake, 5000);
 
 function fake() {
     var data1 = {
-        tick: {
-            instrument: "EUR_USD",
-            bid: getRandom(1, 1.5),
-            ask: getRandom(1.5, 2),
-            time: new Date()
-        }
-    }, data2 = {
-        tick: {
-            instrument: "USD_JPY",
-            bid: getRandom(124, 125),
-            ask: getRandom(126, 127),
-            time: new Date()
-        }
-    }, data = flipCoin() ? data1 : data2;
+            tick: {
+                instrument: "EUR_USD",
+                bid: getRandom(1, 1.5),
+                ask: getRandom(1.5, 2),
+                time: new Date()
+            }
+        }, data2 = {
+            tick: {
+                instrument: "USD_JPY",
+                bid: getRandom(124, 125),
+                ask: getRandom(126, 127),
+                time: new Date()
+            }
+        }, data = flipCoin() ? data1 : data2;
 
     masterNode.shout("argo.streaming", data);
 }
