@@ -20,12 +20,24 @@ module.exports = function (grunt) {
             test: {
                 src: ["test/**/*-spec.js"]
             }
+        },
+
+        conventionalChangelog: {
+            options: {
+                changelogOpts: {
+                    preset: "angular"
+                }
+            },
+            release: {
+                src: "CHANGELOG.md"
+            }
         }
 
     });
 
     grunt.loadNpmTasks("grunt-eslint");
     grunt.loadNpmTasks("grunt-mocha-test");
+    grunt.loadNpmTasks("grunt-conventional-changelog");
 
     grunt.registerTask("default", [
         "eslint",
