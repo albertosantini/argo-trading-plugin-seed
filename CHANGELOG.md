@@ -1,3 +1,13 @@
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.1.0...v2.2.0) (2015-09-05)
+
+
+### Features
+
+* **util:** add orderbook util ([81c7303](https://github.com/albertosantini/argo-trading-plugin-seed/commit/81c7303))
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/2.0.2...v2.1.0) (2015-09-05)
 
