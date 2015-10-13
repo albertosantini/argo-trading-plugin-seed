@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "flic": "~1.1.2",
-        "request": "~2.63.0"
+        "request": "~2.65.0"
     },
     "scripts": {
         "start": "node lib/main.js",
@@ -31,8 +31,8 @@
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-cli": "~0.1.13",
-        "grunt-conventional-changelog": "~4.1.0",
-        "grunt-eslint": "~17.1.0",
+        "grunt-conventional-changelog": "~5.0.0",
+        "grunt-eslint": "~17.2.0",
         "grunt-mocha-test": "~0.12.7",
         "mocha": "~2.3.3"
     }
