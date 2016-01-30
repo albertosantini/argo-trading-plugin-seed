@@ -36,6 +36,6 @@
         "conventional-changelog": "~0.5.3",
         "eslint": "~2.0.0-beta.3",
         "eslint-config-eslint": "~2.0.0",
-        "mocha": "~2.4.4"
+        "mocha": "~2.4.5"
     }
 }
