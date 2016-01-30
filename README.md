@@ -20,13 +20,10 @@ and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the argo-trading-plugin-seed repository. You can get git from
-[http://git-scm.com/](http://git-scm.com/).
+You need [git][] to clone the argo-trading-plugin-seed repository.
 
-We also use a number of Node.js tools to initialize and test argo-trading-plugin-seed.
-You must have Node.js or io.js and its package manager (npm) installed.
-You can get them from [http://nodejs.org/](http://nodejs.org/) or
-[https://iojs.org/](https://iojs.org/).
+We also use a number of [Node.js](http://nodejs.org/) tools to initialize and
+test argo-trading-plugin-seed.
 
 ### Clone argo-trading-plugin-seed
 
@@ -204,6 +201,121 @@ Response example:
 Notice `bars[0]` is the most recent bar, usually not completed.
 
 See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
+details about input and output parameters.
+
+#### orderBook.getOrderBook(barOptions, callback)
+
+```
+var orderBook = require("../util/orderbook");
+
+orderBook.getOrderBook({
+    instrument: "EUR_USD",
+    period: "3600"
+}, console.log);
+```
+
+Response example:
+
+```
+{
+  "1382042401": {
+    "price_points": {
+      "1.359": {
+        "os": 0.638,
+        "ps": 0.2173,
+        "pl": 0.67,
+        "ol": 0.1535
+      },
+      "1.3365": {
+        "os": 0.0512,
+        "ps": 0.4346,
+        "pl": 0.0905,
+        "ol": 0.4435
+      },
+      "1.348": {
+        "os": 0.0546,
+        "ps": 1.8109,
+        "pl": 0.1449,
+        "ol": 0.3992
+      },
+      "1.4285": {
+        "os": 0.0068,
+        "ps": 0,
+        "pl": 0,
+        "ol": 0.0273
+      },
+      "1.335": {
+        "os": 0.1126,
+        "ps": 0.5433,
+        "pl": 0.0362,
+        "ol": 0.7779
+      },
+      "1.3705": {
+        "os": 0.1126,
+        "ps": 0,
+        "pl": 0,
+        "ol": 0.0614
+      },
+      "1.317": {
+        "os": 0.0444,
+        "ps": 0.1992,
+        "pl": 0.0724,
+        "ol": 0.5664
+      }
+    },
+    "rate": 1.3676
+  },
+  "1382037600": {
+    "price_points": {
+      "1.359": {
+        "os": 0.638,
+        "ps": 0.2173,
+        "pl": 0.67,
+        "ol": 0.1535
+      },
+      "1.3365": {
+        "os": 0.0512,
+        "ps": 0.4346,
+        "pl": 0.0905,
+        "ol": 0.4435
+      },
+      "1.348": {
+        "os": 0.0546,
+        "ps": 1.8109,
+        "pl": 0.1449,
+        "ol": 0.3992
+      },
+      "1.381": {
+        "os": 0.0614,
+        "ps": 0,
+        "pl": 0,
+        "ol": 0.058
+      },
+      "1.335": {
+        "os": 0.1126,
+        "ps": 0.5433,
+        "pl": 0.0362,
+        "ol": 0.7779
+      },
+      "1.3705": {
+        "os": 0.1126,
+        "ps": 0,
+        "pl": 0,
+        "ol": 0.0614
+      },
+      "1.317": {
+        "os": 0.0444,
+        "ps": 0.1992,
+        "pl": 0.0724,
+        "ol": 0.5664
+      }
+    },
+    "rate": 1.3677
+  }
+}
+```
+
+See [OANDA orderbook](http://developer.oanda.com/rest-live/forex-labs/#orderbook) for more
 details about input and output parameters.
 
 #### Indicators
