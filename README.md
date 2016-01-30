@@ -203,7 +203,7 @@ Notice `bars[0]` is the most recent bar, usually not completed.
 See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
 details about input and output parameters.
 
-#### orderBook.getOrderBook(barOptions, callback)
+#### orderBook.getOrderBook(orderBookOptions, callback)
 
 ```
 var orderBook = require("../util/orderbook");
