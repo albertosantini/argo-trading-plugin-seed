@@ -353,7 +353,6 @@ should not modify it.
 - Rename the project, using the convention `argo-trading-plugin-<myplugin>`.
 - Rename the start script as `bin/argo-trading-plugin-<myplugin>`.
 - Rename the content of `bin` property in `package.json`.
-- Check `Gruntfile.js`.
 
 
 [Argo]: https://github.com/albertosantini/argo
