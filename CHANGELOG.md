@@ -1,3 +1,15 @@
+<a name="2.2.2"></a>
+## [2.2.2](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.2.1...v2.2.2) (2016-01-30)
+
+
+### Bug Fixes
+
+* **docs:** add orderbook missing info to README ([360ca6d](https://github.com/albertosantini/argo-trading-plugin-seed/commit/360ca6d))
+* **docs:** fix typo in orderbook info ([a2a9351](https://github.com/albertosantini/argo-trading-plugin-seed/commit/a2a9351))
+* **README:** remove grunt info ([00016b6](https://github.com/albertosantini/argo-trading-plugin-seed/commit/00016b6))
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.2.0...v2.2.1) (2015-12-26)
 
