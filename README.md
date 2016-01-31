@@ -320,10 +320,10 @@ details about input and output parameters.
 
 #### Indicators
 
-- `ema`: `function ema(closes, period, ema0)`
+- `ema`: `ema(closes, period, ema0)`
 - `macd`: `macd(closes, slowPeriod, fastPeriod, signalPeriod, slowPeriod0, fastPeriod0, signalPeriod0)`
-- `rsi`: `function rsi(closes, period, close0, avgGain, avgLoss)`
-- `stoch`: `function stoch(closes, highs, lows, kPeriod, dPeriod)`
+- `rsi`: `rsi(closes, period, close0, avgGain, avgLoss)`
+- `stoch`: `stoch(closes, highs, lows, kPeriod, dPeriod)`
 
 ### Scripts
 
