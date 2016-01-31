@@ -1,4 +1,0 @@
-globals:
-    assert: false
-    describe: false
-    it: false
