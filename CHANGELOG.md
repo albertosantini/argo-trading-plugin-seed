@@ -1,3 +1,17 @@
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.2.2...v2.3.0) (2016-02-03)
+
+
+### Bug Fixes
+
+* **README:** fix typo in the indicators signature ([3933a19](https://github.com/albertosantini/argo-trading-plugin-seed/commit/3933a19))
+
+### Features
+
+* **indicators:** add stochastic oscillator ([7b59d83](https://github.com/albertosantini/argo-trading-plugin-seed/commit/7b59d83))
+
+
+
 <a name="2.2.2"></a>
 ## [2.2.2](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.2.1...v2.2.2) (2016-01-30)
 
