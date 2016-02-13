@@ -4,23 +4,22 @@ var util = require("util"),
     flic = require("flic"),
     config = require("../lib/util/config");
 
-var BridgeNode = flic.bridge,
-    FlicNode = flic.node,
-    nodeName = "master";
+var nodeName = "master";
 
-/*eslint-disable no-new */
-new BridgeNode();
-/*eslint-enable no-new */
+flic.createBridge();
 
 process.on("uncaughtException", function (err) {
     util.log(err);
 });
 
-var masterNode = new FlicNode(nodeName, function (err) {
-    if (!err) {
-        util.log("Argo streaming simulator node online");
-    } else {
-        util.log(err);
+var masterNode = flic.createNode({
+    id: nodeName,
+    connect_callback: function (err) {
+        if (!err) {
+            util.log("Argo streaming simulator node online");
+        } else {
+            util.log(err);
+        }
     }
 });
 
