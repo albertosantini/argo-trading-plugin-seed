@@ -1,3 +1,9 @@
+<a name="2.5.1"></a>
+## [2.5.1](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.5.0...v2.5.1) (2016-04-09)
+
+
+
+
 <a name="2.5.0"></a>
 # [2.5.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.4.0...v2.5.0) (2016-03-21)
 
