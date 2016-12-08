@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "flic": "~1.3.4",
-        "request": "~2.76.0"
+        "request": "~2.79.0"
     },
     "scripts": {
         "start": "node lib/main.js",
@@ -34,8 +34,8 @@
     },
     "devDependencies": {
         "conventional-changelog-cli": "~1.2.0",
-        "eslint": "^3.9.0",
+        "eslint": "^3.11.1",
         "eslint-config-eslint": "~3.0.0",
-        "mocha": "~3.1.2"
+        "mocha": "~3.2.0"
     }
 }
