@@ -21,7 +21,7 @@
         "node": ">=4"
     },
     "dependencies": {
-        "flic": "~1.3.4",
+        "flic": "~1.3.5",
         "request": "~2.79.0"
     },
     "scripts": {
