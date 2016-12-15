@@ -163,7 +163,7 @@ orderUtil.fillOrder({
 
 ```
 
-See [OANDA order endpoints](http://developer.oanda.com/rest-live/orders/) for
+See [OANDA order endpoints](http://developer.oanda.com/rest-live-v20/orders-ep/) for
 more details about input and output parameters.
 
 #### bars.getHistBars(barOptions, callback)
@@ -200,7 +200,7 @@ Response example:
 
 Notice `bars[0]` is the most recent bar, usually not completed.
 
-See [OANDA rate endpoints](http://developer.oanda.com/rest-live/rates/) for more
+See [OANDA pricing endpoints](http://developer.oanda.com/rest-live-v20/pricing-ep/) for more
 details about input and output parameters.
 
 #### orderBook.getOrderBook(orderBookOptions, callback)
