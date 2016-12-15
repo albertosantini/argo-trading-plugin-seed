@@ -1,3 +1,14 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.5.1...v3.0.0) (2016-12-15)
+
+
+### Features
+
+* **core:** add debug script([0731918](https://github.com/albertosantini/argo-trading-plugin-seed/commit/0731918))
+* **core:** update to v20 REST calls([7b0e18c](https://github.com/albertosantini/argo-trading-plugin-seed/commit/7b0e18c))
+
+
+
 <a name="2.5.1"></a>
 ## [2.5.1](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v2.5.0...v2.5.1) (2016-04-09)
 
