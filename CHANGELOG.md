@@ -1,3 +1,13 @@
+<a name="3.0.3"></a>
+## [3.0.3](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v3.0.2...v3.0.3) (2017-03-10)
+
+
+### Bug Fixes
+
+* **ema:** fix close value in ema ([54ae012](https://github.com/albertosantini/argo-trading-plugin-seed/commit/54ae012))
+
+
+
 <a name="3.0.2"></a>
 ## [3.0.2](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v3.0.1...v3.0.2) (2017-03-10)
 
