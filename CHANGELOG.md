@@ -1,3 +1,12 @@
+# [4.0.0](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v3.0.5...v4.0.0) (2019-08-31)
+
+
+### Features
+
+* migrate to ES2015 ([0667e38](https://github.com/albertosantini/argo-trading-plugin-seed/commit/0667e38))
+
+
+
 <a name="3.0.5"></a>
 ## [3.0.5](https://github.com/albertosantini/argo-trading-plugin-seed/compare/v3.0.4...v3.0.5) (2017-05-06)
 
