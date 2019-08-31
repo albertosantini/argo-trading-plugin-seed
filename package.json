@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "flic": "~1.3.7",
-        "request": "~2.81.0"
+        "request": "^2.88.0"
     },
     "scripts": {
         "start": "node lib/main.js",
@@ -31,11 +31,10 @@
         "lint": "eslint bin/argo-trading-plugin-seed scripts/**/*.js lib/**/*.js test/**/*.js",
         "mocha": "mocha test/**/*-spec.js",
         "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
-
     },
     "devDependencies": {
-        "conventional-changelog-cli": "~1.3.1",
-        "eslint": "^3.19.0",
-        "mocha": "~3.3.0"
+        "conventional-changelog-cli": "^2.0.23",
+        "eslint": "^6.3.0",
+        "mocha": "^6.2.0"
     }
 }
