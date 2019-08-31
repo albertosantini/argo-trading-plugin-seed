@@ -1,12 +1,13 @@
 "use strict";
 
-var assert = require("assert");
+const assert = require("assert");
 
-var rsi = require("../lib/indicators/rsi");
+const rsi = require("../lib/indicators/rsi");
 
-describe("rsi", function () {
+describe("rsi", () => {
+
     // Figures from http://investexcel.net/relative-strength-index-spreadsheet/
-    var series = [
+    const series = [
         45.15,
         46.26,
         46.50,
@@ -26,18 +27,18 @@ describe("rsi", function () {
         46.76
     ];
 
-    it("test series", function () {
-        var rsiSeries = rsi(series, 14);
+    it("test series", () => {
+        const rsiSeries = rsi(series, 14);
 
-        assert.equal(69.45551128818062, rsiSeries.rsi[0]);
-        assert.equal(61.76978286544929, rsiSeries.rsi[1]);
-        assert.equal(58.18341002297398, rsiSeries.rsi[2]);
+        assert.strictEqual(69.45551128818062, rsiSeries.rsi[0]);
+        assert.strictEqual(61.76978286544929, rsiSeries.rsi[1]);
+        assert.strictEqual(58.18341002297398, rsiSeries.rsi[2]);
     });
 
-    it("test next", function () {
-        var rsiNext = rsi(46.76, 14, 47.21,
+    it("test next", () => {
+        const rsiNext = rsi(46.76, 14, 47.21,
             0.3468877551020406, 0.21469387755102004);
 
-        assert.equal(58.18341002297398, rsiNext.rsi);
+        assert.strictEqual(58.18341002297398, rsiNext.rsi);
     });
 });

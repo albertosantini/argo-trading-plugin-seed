@@ -1,20 +1,20 @@
 "use strict";
 
-var util = require("util"),
+const util = require("util"),
     flic = require("flic"),
     config = require("../lib/util/config");
 
-var nodeName = "master";
+const nodeName = "master";
 
 flic.createBridge();
 
-process.on("uncaughtException", function (err) {
+process.on("uncaughtException", err => {
     util.log(err);
 });
 
-var masterNode = flic.createNode({
+const masterNode = flic.createNode({
     id: nodeName,
-    connect_callback: function (err) {
+    connect_callback: err => { // eslint-disable-line
         if (!err) {
             util.log("Argo streaming simulator node online");
         } else {
@@ -23,42 +23,44 @@ var masterNode = flic.createNode({
     }
 });
 
-masterNode.on("argo.register", function (pluginName, done) {
+masterNode.on("argo.register", (pluginName, done) => {
     util.log("Argo plugin registered", pluginName);
     done(null, "http://fake");
 
-    setTimeout(function () {
-        masterNode.tell(pluginName + ":argo.enable", config, pluginName);
+    setTimeout(() => {
+        masterNode.tell(`${pluginName}:argo.enable`, config, pluginName);
     }, 100);
 });
 
-masterNode.on("argo.unregister", function (pluginName, done) {
+masterNode.on("argo.unregister", (pluginName, done) => {
     util.log("Argo plugin unregistered", pluginName);
     done();
 });
 
-masterNode.on("error", function (err) {
+masterNode.on("error", err => {
     util.log(err);
 });
 
 setInterval(fake, 5000);
 
 function fake() {
-    var data1 = {
+    const data1 = {
             tick: {
                 instrument: "EUR_USD",
                 bid: getRandom(1, 1.5),
                 ask: getRandom(1.5, 2),
                 time: new Date()
             }
-        }, data2 = {
+        },
+        data2 = {
             tick: {
                 instrument: "USD_JPY",
                 bid: getRandom(124, 125),
                 ask: getRandom(126, 127),
                 time: new Date()
             }
-        }, data = flipCoin() ? data1 : data2;
+        },
+        data = flipCoin() ? data1 : data2;
 
     masterNode.shout("argo.streaming", data);
 }

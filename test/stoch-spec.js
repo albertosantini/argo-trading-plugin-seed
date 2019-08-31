@@ -1,12 +1,13 @@
 "use strict";
 
-var assert = require("assert");
+const assert = require("assert");
 
-var stoch = require("../lib/indicators/stoch");
+const stoch = require("../lib/indicators/stoch");
 
-describe("stoch", function () {
+describe("stoch", () => {
+
     // Figures from http://investexcel.net/how-to-calculate-the-stochastic-oscillator/
-    var highs = [
+    const highs = [
         1565.55,
         1579.58,
         1583,
@@ -30,7 +31,7 @@ describe("stoch", function () {
         1672.84
     ];
 
-    var lows = [
+    const lows = [
         1548.19,
         1562.5,
         1575.8,
@@ -54,7 +55,7 @@ describe("stoch", function () {
         1663.52
     ];
 
-    var closes = [
+    const closes = [
         1562.5,
         1578.78,
         1578.79,
@@ -78,25 +79,25 @@ describe("stoch", function () {
         1666.29
     ];
 
-    it("test series", function () {
-        var stochSeries = stoch(closes, highs, lows, 14, 3);
+    it("test series", () => {
+        const stochSeries = stoch(closes, highs, lows, 14, 3);
 
-        assert.equal(90.39391845196968, stochSeries.k[0]);
-        assert.equal(98.19335264101511, stochSeries.k[1]);
-        assert.equal(96.2956810631229, stochSeries.k[2]);
-        assert.equal(98.96654881697037, stochSeries.k[3]);
-        assert.equal(96.77111878946737, stochSeries.k[4]);
-        assert.equal(86.26106470514901, stochSeries.k[5]);
-        assert.equal(100, stochSeries.k[6]);
-        assert.equal(92.84622105723027, stochSeries.k[7]);
+        assert.strictEqual(90.39391845196968, stochSeries.k[0]);
+        assert.strictEqual(98.19335264101511, stochSeries.k[1]);
+        assert.strictEqual(96.2956810631229, stochSeries.k[2]);
+        assert.strictEqual(98.96654881697037, stochSeries.k[3]);
+        assert.strictEqual(96.77111878946737, stochSeries.k[4]);
+        assert.strictEqual(86.26106470514901, stochSeries.k[5]);
+        assert.strictEqual(100, stochSeries.k[6]);
+        assert.strictEqual(92.84622105723027, stochSeries.k[7]);
 
-        assert.equal(null, stochSeries.d[0]);
-        assert.equal(null, stochSeries.d[1]);
-        assert.equal(94.9609840520359, stochSeries.d[2]);
-        assert.equal(97.81852750703614, stochSeries.d[3]);
-        assert.equal(97.34444955652022, stochSeries.d[4]);
-        assert.equal(93.99957743719558, stochSeries.d[5]);
-        assert.equal(94.34406116487213, stochSeries.d[6]);
-        assert.equal(93.03576192079309, stochSeries.d[7]);
+        assert.strictEqual(null, stochSeries.d[0]);
+        assert.strictEqual(null, stochSeries.d[1]);
+        assert.strictEqual(94.9609840520359, stochSeries.d[2]);
+        assert.strictEqual(97.81852750703614, stochSeries.d[3]);
+        assert.strictEqual(97.34444955652022, stochSeries.d[4]);
+        assert.strictEqual(93.99957743719558, stochSeries.d[5]);
+        assert.strictEqual(94.34406116487213, stochSeries.d[6]);
+        assert.strictEqual(93.03576192079309, stochSeries.d[7]);
     });
 });
