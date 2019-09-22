@@ -1,7 +1,7 @@
 # ARGO-TRADING PLUGIN SEED
 
 [![NPM version](https://badge.fury.io/js/argo-trading-plugin-seed.svg)](http://badge.fury.io/js/argo-trading-plugin-seed)
-[![Build Status](https://travis-ci.org/albertosantini/argo-trading-plugin-seed.svg)](https://travis-ci.org/albertosantini/argo-trading-plugin-seed)
+![](https://github.com/albertosantini/argo-trading-plugin-seed/workflows/CI/badge.svg)
 
 This project is a plugin skeleton for [Argo][],
 the open source trading platform, connecting directly with [OANDA][] through the
